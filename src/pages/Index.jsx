@@ -1,19 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { Box, Heading } from "@chakra-ui/react";
+import ColorList from "../components/ColorList";
 
-const App = () => {
+const Index = () => {
   return (
-    <div>
-      <h1>My React App</h1>
-    </div>
+    <Box maxW="container.lg" mx="auto" py={8}>
+      <Heading as="h1" size="xl" mb={8}>
+        Color List
+      </Heading>
+      <ColorList />
+    </Box>
   );
 };
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
-
-export default App;
+export default Index;
